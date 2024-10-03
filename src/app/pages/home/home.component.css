@@ -1,0 +1,56 @@
+/* Categories container styling */
+.categories-container {
+  margin: 20px;                     /* Margin around the container */
+  display: flex;                     /* Flexbox for layout */
+  flex-direction: column;            /* Column layout for categories */
+}
+
+/* Individual category styling */
+.category {
+  margin-bottom: 15px;              /* Increased margin below each category for better spacing */
+  font-size: 1.5em;                 /* Larger font size for category titles */
+  color: #373A40;                   /* Dark color for category titles */
+  font-weight: bold;                /* Bold text for emphasis */
+}
+
+/* Category name specific styling */
+.categoryname {
+  color: rgb(104, 109, 118);              /* Unique color for category names */
+  font-size: 1.2em;                 /* Adjust font size for category names */
+  text-shadow: 1px 1px 2px rgb(55, 58, 64); /* Subtle shadow for text */
+}
+
+/* Row styling for the images */
+.row {
+  display: flex;                     /* Flexbox for row layout */
+  flex-wrap: wrap;                  /* Allow items to wrap */
+  margin: -5px;                     /* Negative margin to compensate for padding on .col */
+}
+
+/* Column styling for each image */
+.col {
+  flex: 1 1 20%;                    /* Show 5 images in a row */
+  padding: 5px;                     /* Smaller padding for tighter spacing */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 5px;               /* Rounded corners for each column */
+  transition: transform 0.3s;       /* Smooth transition for hover effect */
+}
+
+/* Image thumbnail styling */
+.img-thumbnail {
+  width: 100%;                      /* Full width of the column */
+  height: auto;                     /* Auto height to maintain aspect ratio */
+  border-radius: 5px;               /* Rounded corners for images */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Slight shadow for images */
+  transition: transform 0.3s;       /* Smooth transition for hover effect */
+}
+
+/* Hover effect for columns */
+.col:hover {
+  transform: scale(1.05);          /* Slight zoom effect on hover */
+}
+
+/* Hover effect for images */
+.img-thumbnail:hover {
+  opacity: 0.9;                     /* Slightly reduce opacity on hover */
+}

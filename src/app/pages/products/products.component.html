@@ -1,0 +1,35 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" opened>
+    <mat-nav-list>
+  
+      <app-sidenav>
+        
+      </app-sidenav>
+    
+  </mat-nav-list>
+  </mat-sidenav>
+
+<mat-sidenav-content>
+<div class="container responsive-grid">
+  <mat-card *ngFor="let item of filteredList" routerLink="home">
+    <img mat-card-image [src]="item.imageUrl" (click)="router.navigateByUrl('/product/' + item?.id)"/>
+    <mat-card-header>
+      <mat-card-title>{{ item.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ item.description }}</p>
+    </mat-card-content>
+    <div class="product-price">₹1999.00</div>
+    <mat-card-actions>
+      <div class="product-rating">
+        ⭐⭐⭐⭐⭐ <span>(160 reviews)</span>
+      </div>
+      <button mat-button routerLink="home">LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+</mat-sidenav-content>
+    
+
+</mat-sidenav-container>

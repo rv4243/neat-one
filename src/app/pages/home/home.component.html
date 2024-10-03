@@ -1,0 +1,11 @@
+<div class="categories-container">
+    <div class="category" *ngFor="let category of categories">
+      <h2 class="categoryname">{{category.name}}</h2>
+      <div class="row">
+        <div class="col" *ngFor="let image of category.images | slice:0:5">
+          <img [src]="image" alt="Image" class="img-thumbnail">
+
+        </div>
+      </div>
+    </div>
+  </div>
