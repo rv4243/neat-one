@@ -34,7 +34,7 @@ export class ProductsComponent implements OnInit {
   getData() {
     let url : string = '/assets/data/products.json';
     this.httpClient.get(url).subscribe((data: any) => {
-      console.log(data);
+      // console.log(data);
       this.imageList = (data && data.items && data.items.length > 0 ) ? data.items : [];
       this.doFilter();
     });
@@ -43,11 +43,16 @@ export class ProductsComponent implements OnInit {
   doFilter(input: any = null) {
     if(input) {
       this.filteredList = (this.imageList && this.imageList.length > 0) ? this.imageList.filter((x:any) => {
+        console.log(this.filteredList);  // Check if this contains the expected data
         return (x && x.gender === input) ? true : false;
       }) : []
     } else {
       this.filteredList = this.imageList;
     }
+  }
+
+  clicked(){
+    console.log("hii")
   }
 
   onCardClick(route: string) {

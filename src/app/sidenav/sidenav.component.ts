@@ -50,6 +50,9 @@ export class SidenavComponent {
       this.filteredList = this.imageList;
     }
   }
+  clicked(){
+    console.log(this.filteredList);  // Check if this contains the expected data
+  }
 
   onCardClick(route: string) {
     this.router.navigate([route]);
